@@ -11,31 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        ctrl+shift_l {
-            bindings = <&mo 3>;
-            key-positions = <13 14>;
-        };
-
-        ctrl+shift_r {
-            bindings = <&mo 3>;
-            key-positions = <21 22>;
-        };
-    };
-
-    behaviors {
-        ctrl_nav: ctrl_nav {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_NAV";
-            bindings = <&kp LCTRL>, <&mo 3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -51,7 +27,7 @@
 
             bindings = <
 &kp TAB    &kp Q        &kp W             &kp E           &kp R           &kp T          &kp Y        &kp U              &kp I        &kp O    &kp P     &kp BSPC
-&ctrl_nav  &mt LCTRL A  &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G          &kp H        &kp J              &kp K        &kp L    &kp SEMI  &kp SQT
+&none      &mt LCTRL A  &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G          &kp H        &kp J              &kp K        &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z        &kp X             &kp C           &kp V           &kp B          &kp N        &kp M              &kp COMMA    &kp DOT  &kp FSLH  &kp ESC
                                           &kp LCTRL       &lt 1 LEFT_ALT  &lt 5 SPACE    &lt 4 ENTER  &lt 3 RIGHT_SHIFT  &lt 2 RMETA
             >;
