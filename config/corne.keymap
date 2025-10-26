@@ -29,7 +29,7 @@
         ctrl_nav: ctrl_nav {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_NAV";
-            bindings = <&lt 3 LCTRL>, <&none>;
+            bindings = <&kp LCTRL>, <&mo 3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
