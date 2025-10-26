@@ -25,6 +25,17 @@
         };
     };
 
+    behaviors {
+        ctrl_nav: ctrl_nav {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_NAV";
+            bindings = <&lt 3 LCTRL>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -103,6 +114,5 @@
 };
 
 /* BS Corne bodge */
-&nice_view_spi {
-    cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;
-};
+
+&nice_view_spi { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>; };
